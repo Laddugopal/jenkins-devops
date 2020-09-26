@@ -13,11 +13,11 @@
 //DECLARATIVE
 pipeline{
 	agent any
-	stages{
-		stage("Build){
+	stages {
+		stage("Build) {
 			echo "Hare Krishna"
 		}
-		stage("Test"){
+		stage("Test") {
 			echo "Chant and be Happy"
 		}
 	}
