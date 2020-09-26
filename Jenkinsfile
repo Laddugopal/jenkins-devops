@@ -25,4 +25,15 @@ pipeline{
 			}
 		}
 	}
+	post {
+		always {
+			echo "Hare Krishna Hare Ram"
+		}
+		success {
+			echo "Hare Krishna Hare Ram Mahamantra"
+		}
+		failure {
+			echo " Do chanting daily"
+		}
+	}
 }
