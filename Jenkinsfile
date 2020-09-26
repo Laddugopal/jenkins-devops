@@ -13,16 +13,24 @@
 //DECLARATIVE
 pipeline{
 	agent any
+	environment {
+		mavenHome = tool 'myMaven'
+		PATH ="mavenHome/bin:$PATH"
+	}
 	stages {
-		stage('Build') {
+		stage('Checkout') {
 			steps {
+				sh 'mvn --version'
 				echo "Hare Krishna"
 			}
 		}
-		stage('Test') {
+		stage('Compile') {
 			steps {
-				echo "Chant and be Happy"
+				sh "mvn clean compile"
 			}
+		}
+		stage ('Test') {
+			sh "mvn test"
 		}
 	}
 	post {
