@@ -14,7 +14,7 @@
 pipeline{
 	agent any
 	environment {
-		mavenHome = tool 'myMaven'
+		mavenHome = tool 'Laddumaven'
 		PATH ="mavenHome/bin:$PATH"
 	}
 	stages {
