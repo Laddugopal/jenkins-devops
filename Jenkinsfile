@@ -15,10 +15,14 @@ pipeline{
 	agent any
 	stages {
 		stage("Build) {
-			echo "Hare Krishna"
+			steps {
+				echo "Hare Krishna"
+			}
 		}
 		stage("Test") {
-			echo "Chant and be Happy"
+			steps {
+				echo "Chant and be Happy"
+			}
 		}
 	}
 }
